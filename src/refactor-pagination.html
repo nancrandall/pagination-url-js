@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pagination Pattern</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <!-- JavaScript-->
+  <script type="text/javascript" src="main.js"></script>
+  <!-- CSS-->
+  <link rel="stylesheet" href="pagination-pattern.css">
+</head>
+<body>
+  <main class="styleguide-main">
+    <article>
+      <section>
+        <h2 class="styleguide-section-heading">Pagination</h2>
+        <h3>Scenario 1</h3>
+        <p>"Only number of items is shown" text is displayed if there is only one page.</p>
+        <div class="example -padded">
+          <div class="pagination-holder">
+            <div class="page-info">
+              <p>
+                <span class="page-start-index">1</span> -
+                <span class="page-last-index">10</span> of
+                <span class="total-item-count">10</span> items
+              </p>
+            </div>
+            <div>
+              <p class="info-text">Only number of items is shown</p>
+            </div>
+          </div>
+        </div>
+        <div class="new-code">
+          <h3>Scenario 2</h3>
+          <p>Previous button is disabled when the pagination reaches the first page or by default.</p>
+          <div class="example -padded">
+            <div class="pagination-holder">
+              <div class="page-info">
+                <p>
+                  <span class="page-start-index">1</span> -
+                  <span class="page-last-index">10</span> of
+                  <span class="total-item-count">50</span> items
+                </p>
+              </div>
+              <nav role="navigation" class="nav-pagination" aria-label="Page">
+                <ul class="pagination">
+                  <li class="list-nav -prev disabled">
+                    <a href="#" class="page-link" tabindex="-1">
+                      <span class="screenreader-only">Disabled previous page, pagination reached first page</span>
+                      <span aria-hidden="true" role="presentation"><i class="icon-chevron-back"></i></span>
+                    </a>
+                  </li>
+                  <li class="list-nav selected"><a href="#" class="page-link"><span class="screenreader-only">selected page</span> 1</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 2</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 3</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 4</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 5</a></li>
+                  <li class="list-nav -next">
+                    <a href="#" class="page-link">
+                      <span class="screenreader-only">Next Page Page 2</span>
+                      <span aria-hidden="true" role="presentation"><i class="icon-chevron-forward"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <h3>Scenario 3</h3>
+          <p>Prev button and Next button should be active when first and last pages are not selected.</p>
+          <div class="example -padded">
+            <div class="pagination-holder">
+              <div class="page-info">
+                <p>
+                  <span class="page-start-index">1</span> -
+                  <span class="page-last-index">10</span> of
+                  <span class="total-item-count">70</span> items
+                </p>
+              </div>
+              <nav role="navigation" class="nav-pagination" aria-label="Page">
+                <ul class="pagination">
+                  <li class="list-nav -prev">
+                    <a href="#" class="page-link">
+                      <span class="screenreader-only">Previous Page Page 1</span>
+                      <span aria-hidden="true" role="presentation"><i class="icon-chevron-back"></i></span>
+                    </a>
+                  </li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 1</a></li>
+                  <li class="list-nav selected"><a href="#" class="page-link"><span class="screenreader-only">selected page</span> 2</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 3</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 4</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 5</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 6</a></li>
+                  <li class="list-nav"><a href="#" class="page-link"><span class="screenreader-only">page</span> 7</a></li>
+                  <li class="list-nav -next">
+                    <a href="#" class="page-link">
+                      <span class="screenreader-only">Next Page Page 3</span>
+                      <span aria-hidden="true" role="presentation"><i class="icon-chevron-forward"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    </main>
+  </body>
+</html>
