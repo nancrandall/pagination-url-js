@@ -1,6 +1,6 @@
-# Pagination Pattern
+# Pagination URL Vanilla JS 
 
-> node package: a sub-project in patterns library
+> a pagination setup that uses vanilla Javascript to point to a html page based on the URL value
 
 ## Build Setup
 
